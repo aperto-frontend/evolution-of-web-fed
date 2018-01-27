@@ -1,0 +1,205 @@
+$cern-color: hsl(150, 100%, 50%);
+
+.reveal {
+
+  .overlay .viewport iframe {
+    background-color: white;
+  }
+
+  .slides {
+    margin: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 60px;
+      text-transform: none;
+    }
+
+    & > section {
+      padding: 0;
+      height: 100vh;
+
+      img {
+        background-color: transparent;
+      }
+      & > section {
+        padding: 0;
+        height: 100vh;
+      }
+    }
+  }
+
+  .slide {
+    position: relative;
+    height: 100%;
+
+    &.is-intro {
+      font-family: "IBM Plex";
+
+      h1 {
+        font-family: "IBM Plex Bold";
+      }
+    }
+
+    &.is-1990 {
+      font-family: "Cern Terminal", monospace;
+      color: $cern-color;
+
+      a {
+        color: $cern-color;
+        &:hover {
+          color: $cern-color;
+        }
+      }
+
+      .timeline {
+        border-top-color: $cern-color;
+        &__item {
+          &::before {
+            background-color: $cern-color;
+          }
+        }
+
+      }
+    }
+
+    &.is-1995 {
+      font-family: "Times New Roman";
+      -webkit-font-smoothing: none;
+      color: black;
+    }
+  }
+
+  .timeline {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 20px;
+    padding: 0 20px;
+    width: calc(100vw - 40px);
+    border-top: 2px solid black;
+
+    &__item {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 20px;
+        transform: translateY(-50%);
+        background-color: black;
+      }
+    }
+  }
+
+  .intro {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-item: center;
+    justify-content: center;
+    flex-direction: column;
+    &__headline {}
+
+    &__subline {
+      font-size: 1.2rem;
+    }
+
+    &__logo {
+      position: absolute;
+      width: 150px;
+      left: 40px;
+      top: 40px;
+    }
+  }
+}
+
+
+.event {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 90px);
+
+  .reveal & {
+    padding: 100px 0;
+  }
+
+  &__headline {
+    .is-1990 & {
+      font-family: "Cern Terminal", monospace;
+      color: $cern-color;
+    }
+
+    .is-1995 & {
+      font-family: "Times New Roman";
+      color: black;
+    }
+  }
+
+  &__list {
+    position: relative;
+    &:first-of-type {
+      margin-top: 120px;
+    }
+    min-height: 60px;
+    width: 100vw;
+  }
+
+  &__list-item {
+    position: absolute;
+
+    &.is-1 {
+      left: 60px;
+      text-align: left;
+    }
+
+    &.is-2 {
+      left: calc(24% + 60px);
+      text-align: left;
+    }
+
+    &.is-3 {
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: left;
+    }
+
+    &.is-4 {
+      right: calc(24% + 60px);
+      text-align: right;
+    }
+
+    &.is-5 {
+      right: 60px;
+      text-align: right;
+    }
+  }
+
+  &__linklist {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .reveal & {
+      margin: 130px 0;
+    }
+
+    .is-1990 & {
+      list-style: none outside;
+    }
+  }
+
+  &__linklist-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+
+
+
+
