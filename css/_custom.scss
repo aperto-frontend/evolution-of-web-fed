@@ -72,6 +72,13 @@ $cern-color: hsl(150, 100%, 50%);
       font-family: Arial, Helvetica, sans-serif;
       color: black;
     }
+
+    &.is-2015 {
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 40px;
+        text-transform: none;
+      }
+    }
   }
 
   .timeline {
