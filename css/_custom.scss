@@ -6,6 +6,11 @@ $cern-color: hsl(150, 100%, 50%);
     background-color: white;
   }
 
+  .slide {
+    height: 100vh;
+    width: 100vw;
+  }
+
   .slides {
     margin: 0;
 
@@ -109,6 +114,7 @@ $cern-color: hsl(150, 100%, 50%);
   .intro {
     position: relative;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-item: center;
     justify-content: center;
@@ -128,17 +134,21 @@ $cern-color: hsl(150, 100%, 50%);
   }
 }
 
-
 .event {
   position: relative;
   width: 100vw;
   height: calc(100vh - 90px);
 
   .reveal & {
-    padding: 100px 0;
+    padding: 20px 0 20px 0;
+
+    &__headline {
+      padding: 0 15px;
+    }
   }
 
   &__headline {
+
     .is-1990 & {
       font-family: "Cern Terminal", monospace;
       color: $cern-color;
@@ -155,12 +165,17 @@ $cern-color: hsl(150, 100%, 50%);
       font-size: 3rem !important;
       color: black;
     }
+
+    .is-2015 & {
+      font-size: 3rem !important;
+      color: black;
+    }
   }
 
   &__list {
     position: relative;
     &:first-of-type {
-      margin-top: 120px;
+
     }
     min-height: 60px;
     width: 100vw;

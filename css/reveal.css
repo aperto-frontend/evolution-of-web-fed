@@ -1557,6 +1557,10 @@ body {
 .reveal .overlay .viewport iframe {
   background-color: white; }
 
+.reveal .slide {
+  height: 100vh;
+  width: 100vw; }
+
 .reveal .slides {
   margin: 0; }
   .reveal .slides h1, .reveal .slides h2, .reveal .slides h3, .reveal .slides h4, .reveal .slides h5, .reveal .slides h6 {
@@ -1596,6 +1600,9 @@ body {
   .reveal .slide.is-2005 {
     font-family: Arial, Helvetica, sans-serif;
     color: black; }
+  .reveal .slide.is-2015 h1, .reveal .slide.is-2015 h2, .reveal .slide.is-2015 h3, .reveal .slide.is-2015 h4, .reveal .slide.is-2015 h5, .reveal .slide.is-2015 h6 {
+    font-size: 40px;
+    text-transform: none; }
 
 .reveal .timeline {
   position: absolute;
@@ -1626,6 +1633,7 @@ body {
 .reveal .intro {
   position: relative;
   height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1650,7 +1658,9 @@ body {
   width: 100vw;
   height: calc(100vh - 90px); }
   .reveal .event {
-    padding: 100px 0; }
+    padding: 20px 0 20px 0; }
+    .reveal .event__headline {
+      padding: 0 15px; }
   .is-1990 .event__headline {
     font-family: "Cern Terminal", monospace;
     color: #00ff80; }
@@ -1662,12 +1672,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem !important;
     color: black; }
+  .is-2015 .event__headline {
+    font-size: 3rem !important;
+    color: black; }
   .event__list {
     position: relative;
     min-height: 60px;
     width: 100vw; }
-    .event__list:first-of-type {
-      margin-top: 120px; }
   .event__list-item {
     position: absolute; }
     .event__list-item.is-1 {
